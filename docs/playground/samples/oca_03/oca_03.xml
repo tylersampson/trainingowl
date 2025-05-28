@@ -1,0 +1,11 @@
+<templates xml:space="preserve">
+   <t t-name="oca_training.Parent">
+       <t t-foreach="state.childs" t-as="child" t-key="child.id">
+           <Child data="child"/>
+       </t>
+   </t>
+   <t t-name="oca_training.Child">
+       <div t-esc="props.data.name" class="child"
+            t-attf-style="background-color: {{props.data.color}}"/>
+   </t>
+</templates>

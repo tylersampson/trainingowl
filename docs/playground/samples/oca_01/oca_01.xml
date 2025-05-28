@@ -1,0 +1,11 @@
+<templates xml:space="preserve">
+   <t t-name="oca_training.Counter">
+       <p>Counter: <t t-esc="counter.value"/></p>
+       <button 
+class="btn btn-primary" 
+t-on-click="increment"
+ >
+           Increment
+       </button>
+   </t>
+</templates>

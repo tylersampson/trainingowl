@@ -70,6 +70,21 @@ function makeCodeIframe(js, css, xml) {
 
 const SAMPLES = [
   {
+    description: "OCA 01 - First Component Example",
+    folder: "oca_01",
+    code: ["js", "xml", "css"],
+  },
+  {
+    description: "OCA 02 - Hooks",
+    folder: "oca_02",
+    code: ["js", "xml", "css"],
+  },
+  {
+    description: "OCA 03 - Subcomponents",
+    folder: "oca_03",
+    code: ["js", "xml", "css"],
+  },
+  {
     description: "Components",
     folder: "components",
     code: ["js", "xml", "css"],

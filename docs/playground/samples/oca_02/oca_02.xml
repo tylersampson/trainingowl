@@ -1,0 +1,5 @@
+<templates xml:space="preserve">
+   <t t-name="oca_training.FocusedElement">
+       <input t-ref="input_el"/>
+   </t>
+</templates>
