@@ -1,0 +1,11 @@
+<templates xml:space="preserve">
+   <t t-name="training_oca.Parent">
+       <div>
+           <p>Count: <t t-esc="state.count"/></p>
+           <Child onIncrement.bind="increment"/>
+       </div>
+   </t>
+   <t t-name="training_oca.Child">
+       <button t-on-click="props.onIncrement">Increment from Child</button>
+   </t>
+</templates>

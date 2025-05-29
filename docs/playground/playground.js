@@ -85,6 +85,26 @@ const SAMPLES = [
     code: ["js", "xml", "css"],
   },
   {
+    description: "OCA 04 - Function Props",
+    folder: "oca_04",
+    code: ["js", "xml", "css"],
+  },
+  {
+    description: "OCA 05 - Environment parameters",
+    folder: "oca_05",
+    code: ["js", "xml", "css"],
+  },
+  {
+    description: "OCA 06 - Create your hook",
+    folder: "oca_06",
+    code: ["js", "xml", "css"],
+  },
+  {
+    description: "OCA 07 - Slots usage",
+    folder: "oca_07",
+    code: ["js", "xml", "css"],
+  },
+  {
     description: "Components",
     folder: "components",
     code: ["js", "xml", "css"],

@@ -1,0 +1,37 @@
+<templates xml:space="preserve">
+    <div t-name="training_oca.Parent" class="parent">
+        <Child>
+            <t t-set-slot="header">
+                <span>Title</span>
+            </t>
+            <t t-set-slot="footer">
+                <span>Buttons</span>
+            </t>
+            <div>My Body</div>
+        </Child>
+        <Child>
+            <t t-set-slot="header">
+                <span>Another Title</span>
+            </t>
+            <t t-set-slot="footer">
+                <span>Different Buttons</span>
+            </t>
+            <t t-set-slot="default">
+                <div>Another Body</div>
+            </t>
+        </Child>
+    </div>
+    <t t-name="training_oca.Child">
+        <div class="child">
+            <header>
+                <t t-slot="header"/>
+            </header>
+            <main>
+                <t t-slot="default"/>
+            </main>
+            <footer>
+                <t t-slot="footer"/>
+            </footer>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,14 @@
+.child {
+    padding: 2px;
+    margin: 3px;
+}
+.parent {
+    display: flex;
+}
+header {
+    background-color: black;
+    color: white;
+}
+footer {
+    background-color: gray;
+}
