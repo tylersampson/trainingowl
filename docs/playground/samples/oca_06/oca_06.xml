@@ -1,6 +1,6 @@
 <templates xml:space="preserve">
     <div t-name="training_oca.Parent">
-        <button t-on-click="onIncrement">Increment from Child</button>
+        <button t-on-click="onIncrement">Increment from Parent</button>
         <A/>
     </div>
     <t t-name="training_oca.A">
