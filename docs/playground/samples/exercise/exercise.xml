@@ -1,5 +1,34 @@
 <templates xml:space="preserve">
-    <t t-name="training_oca.Parent">
-        <div>To Fill</div>
+    <t t-name="training_oca.Dashboard">
+        <div class="dashboard">
+            <Counter 
+                t-foreach="state.counters" 
+                t-key="counter.id" 
+                t-as="counter"
+                id="counter.id"
+                name="counter.name"
+                counter="counter.value"
+                onSave.bind="updateCounter"
+                onIncrement.bind="incrementCounter"
+                />        
+        </div>
+        <button t-on-click="addCounter" style="margin-top: 20px;">Add Counter</button>
     </t>
+    <div t-name="training_oca.Counter">
+        <div>
+            <h2>
+                <span t-esc="props.name" t-if="!state.editing" />
+                <svg t-if="!state.editing"   t-on-click="toggleEdit" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                </svg>
+                <input t-if="state.editing" type="text" t-att-value="props.name" t-on-blur="(e) => { props.onSave(props.id, e.target.value); state.editing = false }" />
+            </h2>            
+            <div class="value">
+                <h3 t-esc="props.counter" />
+                <button t-on-click="() => props.onIncrement(props.id)">
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
 </templates>
